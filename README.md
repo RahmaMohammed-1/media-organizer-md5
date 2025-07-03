@@ -61,10 +61,10 @@ You’ll be prompted to choose:
 ## 🧪 Example
 
 ```bash
-./media_organizer_md5.sh /media/zz/CC70-D0**/Media_Backups/ --dry-run
+./media_organizer_md5.sh /media/zz/CC70-D0--/Media_Backups/ --dry-run
 ```
 
-→ Simulates moving your media into `/media/zz/CC70-D0**/Media_Backups/Images/YYYY`, etc., without changing anything.
+→ Simulates moving your media into `/media/zz/CC70-D0--/Media_Backups/Images/YYYY`, etc., without changing anything.
 
 ---
 
@@ -105,5 +105,5 @@ MIT License
 
 ## ✨ Author
 
-Developed by \[debjit018]
+Developed by \[debjit018].
 Feel free to fork, suggest improvements, or contribute!
