@@ -43,7 +43,8 @@ sudo apt install libimage-exiftool-perl
 
 ```bash
 chmod +x media_organizer_md5.sh
-./organize_all_media_md5.sh /path/to/parent/folder [--dry-run]
+./media_organizer_md5.sh /path/to/parent/folder [--dry-run]
+./media_organizer_md5.sh /path/to/parent/folder
 ```
 
 You’ll be prompted to choose:
@@ -60,10 +61,10 @@ You’ll be prompted to choose:
 ## 🧪 Example
 
 ```bash
-./media_organizer_md5.sh ~/Downloads --dry-run
+./media_organizer_md5.sh /media/zz/CC70-D0**/Media_Backups/ --dry-run
 ```
 
-→ Simulates moving your media into `~/Downloads/Images/YYYY/`, etc., without changing anything.
+→ Simulates moving your media into `/media/zz/CC70-D0**/Media_Backups/Images/YYYY`, etc., without changing anything.
 
 ---
 
