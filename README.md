@@ -1,109 +1,162 @@
-# 📁 Organize Media with MD5 Duplicate Detection
+# Media Organizer with MD5 Checksum: Organize Your Media Files
 
-A powerful Bash script to organize your **images**, **videos**, or **audio files** into year-based folders using metadata — while detecting duplicates using **MD5 checksums**.
+![Media Organizer](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen) [![GitHub Repo stars](https://img.shields.io/github/stars/RahmaMohammed-1/media-organizer-md5)](https://github.com/RahmaMohammed-1/media-organizer-md5/stargazers) [![GitHub forks](https://img.shields.io/github/forks/RahmaMohammed-1/media-organizer-md5)](https://github.com/RahmaMohammed-1/media-organizer-md5/network/members)
 
-✅ Supports EXIF-aware sorting  
-✅ Prevents duplicate files by content (MD5)  
-✅ Works recursively across folders  
-✅ Deletes empty directories automatically  
-✅ Dry-run mode for safe testing
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [Logging](#logging)
+- [Cleanup](#cleanup)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
----
+## Overview
 
-## 🚀 Features
+The **Media Organizer MD5** project helps you manage your media files effectively. It organizes images, videos, and audio files into folders based on the year of creation. By using EXIF metadata and MD5 checksums, it ensures that duplicate files do not clutter your storage. This tool also includes a dry-run feature to preview actions before executing them, along with logging and automatic cleanup options.
 
-- 📷 Organize **Images**, 🎞️ **Videos**, 🎵 **Audio**, or **All**
-- 🕒 Uses `DateTimeOriginal`, `CreateDate`, or `FileModifyDate`
-- 🧠 Automatically avoids duplicate content using **MD5 hashing**
-- 🧹 Removes empty folders after sorting
-- 🧪 `--dry-run` option available
-- 🔏 Logs everything in `organize_<type>.log`
+You can download the latest release [here](https://github.com/RahmaMohammed-1/media-organizer-md5/releases).
 
----
+## Features
 
-## 📦 Requirements
+- **Year-based Organization**: Automatically sorts media files into folders by year.
+- **Duplicate Detection**: Uses MD5 checksums to identify and prevent duplicates.
+- **EXIF Metadata Support**: Extracts metadata from images and videos for accurate sorting.
+- **Dry-Run Option**: Preview actions without making changes.
+- **Logging**: Keeps a record of actions taken for review.
+- **Automatic Cleanup**: Removes empty folders and unnecessary files after processing.
 
-Ensure these are installed:
+## Installation
 
-- `bash`
-- `exiftool` (for extracting timestamps)
-- `md5sum`
-- `find`
+To get started with the Media Organizer MD5, follow these steps:
 
-On Ubuntu/Debian:
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/RahmaMohammed-1/media-organizer-md5.git
+   ```
+
+2. **Navigate to the Directory**:
+   ```bash
+   cd media-organizer-md5
+   ```
+
+3. **Make the Script Executable**:
+   ```bash
+   chmod +x media-organizer.sh
+   ```
+
+4. **Install Required Tools**:
+   Ensure you have `exiftool` installed. You can install it using:
+   - For Debian/Ubuntu:
+     ```bash
+     sudo apt-get install exiftool
+     ```
+   - For macOS:
+     ```bash
+     brew install exiftool
+     ```
+
+## Usage
+
+To use the media organizer, run the script with the desired options. Here’s a basic command:
 
 ```bash
-sudo apt update
-sudo apt install libimage-exiftool-perl
-````
+./media-organizer.sh /path/to/your/media
+```
 
----
+Replace `/path/to/your/media` with the path to your media files. 
 
-## 🔧 Usage
+### Options
+
+- `--dry-run`: Preview actions without executing them.
+- `--log`: Specify a log file to save actions.
+- `--cleanup`: Automatically remove empty folders after processing.
+
+Example command with options:
 
 ```bash
-chmod +x media_organizer_md5.sh
-./media_organizer_md5.sh /path/to/parent/folder [--dry-run]
-./media_organizer_md5.sh /path/to/parent/folder
+./media-organizer.sh /path/to/your/media --dry-run --log=organizer.log --cleanup
 ```
 
-You’ll be prompted to choose:
+## How It Works
+
+The script scans the specified directory for media files. It extracts metadata using `exiftool` to determine the creation year of each file. It then organizes the files into folders named after their respective years. 
+
+MD5 checksums are calculated for each file to check for duplicates. If a duplicate is found, it will not be moved to the new folder. 
+
+### File Structure
+
+The resulting directory structure will look like this:
 
 ```
-1. Images
-2. Videos
-3. Audio
-4. All (Images + Videos + Audio)
+/media
+    ├── 2020
+    │   ├── image1.jpg
+    │   ├── video1.mp4
+    ├── 2021
+    │   ├── audio1.mp3
+    │   ├── image2.jpg
 ```
 
----
+## Logging
 
-## 🧪 Example
+The logging feature records every action taken by the script. This includes:
+
+- Files processed
+- Duplicates found
+- Folders created
+- Errors encountered
+
+You can specify a log file using the `--log` option. 
+
+Example:
 
 ```bash
-./media_organizer_md5.sh /media/zz/CC70-D0--/Media_Backups/ --dry-run
+./media-organizer.sh /path/to/your/media --log=organizer.log
 ```
 
-→ Simulates moving your media into `/media/zz/CC70-D0--/Media_Backups/Images/YYYY`, etc., without changing anything.
+This command will create a log file named `organizer.log` in the current directory.
 
----
+## Cleanup
 
-## 📂 Folder Structure
+The automatic cleanup feature removes empty folders after processing. This helps keep your media directory tidy. To enable cleanup, use the `--cleanup` option.
 
-```
-ParentDirectory/
-├── Images/
-│   └── 2024/
-│       └── 2024-05-20_14-22-31.jpg
-├── Videos/
-│   └── 2023/
-│       └── 2023-11-02_18-07-00.mp4
-├── Audio/
-│   └── 2021/
-│       └── 2021-08-19_10-05-12.mp3
+Example:
+
+```bash
+./media-organizer.sh /path/to/your/media --cleanup
 ```
 
----
+## Contributing
 
-## 🛡️ Duplicate Handling
+Contributions are welcome! If you would like to improve the Media Organizer MD5, follow these steps:
 
-Before moving a file, the script:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Create a pull request.
 
-* Computes its **MD5 hash**
-* Compares against existing files in the target folder
-* Skips if identical content is already present
+## License
 
-No clutter. No overwrite. Just smart moves.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
----
+## Support
 
-## 📝 License
+If you have any questions or issues, feel free to open an issue in the GitHub repository. You can also download the latest release [here](https://github.com/RahmaMohammed-1/media-organizer-md5/releases) for updates and improvements. 
 
-MIT License
+![Media Management](https://img.shields.io/badge/Media%20Management%20Made%20Easy-brightblue) 
 
----
-
-## ✨ Author
-
-Developed by \[debjit018].
-Feel free to fork, suggest improvements, or contribute!
+For further assistance, please refer to the documentation within the repository.
